@@ -8,12 +8,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             {options.map(option => {
                 return (
                 <button
+                    name={option}
                     className={css.buttons}
                     type="button"
                     key={option}
-                    onClick={() => {
-                        onLeaveFeedback(option);
-                    }}
+                    onClick={onLeaveFeedback}
                 >
                     {option}
                 </button>
